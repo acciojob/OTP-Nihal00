@@ -5,9 +5,9 @@ const inputs = document.querySelectorAll('.code');
 inputs.forEach(input => {
   input.addEventListener('keyup', () => {
     // If the key pressed is the backspace key
-    if (event.keyCode === 8) {
+    // if (event.keyCode === isNaN(input.value)) {
       // Remove the last character from the input
-      input.value = input.value.slice(0, -1);
+      // input.value = input.value.slice(0, -1);
 
       // If the input is empty
       if (input.value === '') {
@@ -16,13 +16,13 @@ inputs.forEach(input => {
         if (previousInput) {
           previousInput.focus();
         }
-      }
+      // }
     } else {
       // Otherwise, add the character to the input
       input.value += event.keyCode;
 
       // If the input is full
-      if (input.value.length === 6) {
+      if (input.value.length === 1) {
         // Focus the verify button
         document.getElementById('verify-button').focus();
       } else {
